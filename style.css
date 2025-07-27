@@ -84,7 +84,7 @@ body {
   margin-top: 1.5rem;
 }
 
-.hero .btn-main {
+ .btn-main {
   background: linear-gradient(45deg, #00b4d8, #0077b6);
   color: white;
   border: none;
@@ -97,7 +97,7 @@ body {
   text-align: center;
 }
 
-.hero .btn-main:hover {
+ .btn-main:hover {
   transform: translateY(-3px);
   background: linear-gradient(45deg, #0077b6, #00b4d8);
 }
