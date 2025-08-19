@@ -9,9 +9,15 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <div class="collapse navbar-collapse d-flex justify-content-center" id="navMenu">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">    
+    <!-- Toggler button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navMenu">
       <ul class="navbar-nav text-center">
         <li class="nav-item px-3"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item px-3"><a class="nav-link" href="#skills">Skills</a></li>
@@ -24,6 +30,8 @@
     </div>
   </div>
 </nav>
+
+
 
 
   <!-- Hero -->
@@ -55,6 +63,17 @@
       <p>A real-time news aggregator platform integrating external APIs with search and filtering features.</p>
       <a href="https://indianewshub.netlify.app" target="_blank" class="btn-main">Live Project</a>
     </div>
+    <!-- Regular Project -->
+    <div class="project-card">
+  <h3>Banking Application</h3>
+  <p>
+    A Java-based banking system built using OOP, multithreading, and collections framework. 
+    Implemented account creation, deposit, withdrawal, and balance analysis with Stream API, 
+    ensuring thread-safe transactions and efficient data management.
+  </p>
+  <a href="https://github.com/nandanwarlina/Banking-App.git" target="_blank" class="btn-main">View Code</a>
+</div>
+
 
   </section>
 
@@ -147,5 +166,21 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navMenu = document.getElementById("navMenu");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const bsCollapse = new bootstrap.Collapse(navMenu, {
+          toggle: false
+        });
+        bsCollapse.hide(); 
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
